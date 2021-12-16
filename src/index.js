@@ -19,9 +19,10 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     {/* <App saludo="Hola tavo"/> */}
-    <App>
+    {/* <App>
       Holaaa oli
-    </App>
+    </App> */}
+  <App/>
   </React.StrictMode>,
   document.getElementById('root')
 );
