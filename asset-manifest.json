@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/tavo20/react-intro-platzi/static/css/main.9dd8f1c0.chunk.css",
-    "main.js": "/tavo20/react-intro-platzi/static/js/main.23aa643b.chunk.js",
-    "main.js.map": "/tavo20/react-intro-platzi/static/js/main.23aa643b.chunk.js.map",
-    "runtime-main.js": "/tavo20/react-intro-platzi/static/js/runtime-main.f1a44099.js",
-    "runtime-main.js.map": "/tavo20/react-intro-platzi/static/js/runtime-main.f1a44099.js.map",
-    "static/js/2.b08a9135.chunk.js": "/tavo20/react-intro-platzi/static/js/2.b08a9135.chunk.js",
-    "static/js/2.b08a9135.chunk.js.map": "/tavo20/react-intro-platzi/static/js/2.b08a9135.chunk.js.map",
-    "static/js/3.29c30a60.chunk.js": "/tavo20/react-intro-platzi/static/js/3.29c30a60.chunk.js",
-    "static/js/3.29c30a60.chunk.js.map": "/tavo20/react-intro-platzi/static/js/3.29c30a60.chunk.js.map",
-    "index.html": "/tavo20/react-intro-platzi/index.html",
-    "static/css/main.9dd8f1c0.chunk.css.map": "/tavo20/react-intro-platzi/static/css/main.9dd8f1c0.chunk.css.map",
-    "static/js/2.b08a9135.chunk.js.LICENSE.txt": "/tavo20/react-intro-platzi/static/js/2.b08a9135.chunk.js.LICENSE.txt"
+    "main.css": "/react-intro-platzi/static/css/main.9dd8f1c0.chunk.css",
+    "main.js": "/react-intro-platzi/static/js/main.23aa643b.chunk.js",
+    "main.js.map": "/react-intro-platzi/static/js/main.23aa643b.chunk.js.map",
+    "runtime-main.js": "/react-intro-platzi/static/js/runtime-main.a5610cc5.js",
+    "runtime-main.js.map": "/react-intro-platzi/static/js/runtime-main.a5610cc5.js.map",
+    "static/js/2.b08a9135.chunk.js": "/react-intro-platzi/static/js/2.b08a9135.chunk.js",
+    "static/js/2.b08a9135.chunk.js.map": "/react-intro-platzi/static/js/2.b08a9135.chunk.js.map",
+    "static/js/3.29c30a60.chunk.js": "/react-intro-platzi/static/js/3.29c30a60.chunk.js",
+    "static/js/3.29c30a60.chunk.js.map": "/react-intro-platzi/static/js/3.29c30a60.chunk.js.map",
+    "index.html": "/react-intro-platzi/index.html",
+    "static/css/main.9dd8f1c0.chunk.css.map": "/react-intro-platzi/static/css/main.9dd8f1c0.chunk.css.map",
+    "static/js/2.b08a9135.chunk.js.LICENSE.txt": "/react-intro-platzi/static/js/2.b08a9135.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f1a44099.js",
+    "static/js/runtime-main.a5610cc5.js",
     "static/js/2.b08a9135.chunk.js",
     "static/css/main.9dd8f1c0.chunk.css",
     "static/js/main.23aa643b.chunk.js"
