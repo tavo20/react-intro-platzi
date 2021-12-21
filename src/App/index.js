@@ -16,7 +16,7 @@ const defaultTodos = [
     text: 'Otro curso about react más avanzado', completed: true 
   },
 ]
-// localStorage.setItem('TODOS_V1',JSON.stringify(defaultTodos) );
+// localStorage.setItem('TODOS_V1',JSON.stringify(defaultTodos) )   ;
 
 
 function App() {
