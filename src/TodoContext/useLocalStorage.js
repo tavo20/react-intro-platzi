@@ -4,6 +4,7 @@ import React from 'react'
 function useLocalStorage(itemName, initialValue) {
     const [ item, setItem ] = React.useState(initialValue);
     const [loading, setLoading] = React.useState(true);
+    const [empty, setEmpty] = React.useState(false);
     const [error, setError] = React.useState(false);
   
     React.useEffect(() => {
@@ -16,8 +17,13 @@ function useLocalStorage(itemName, initialValue) {
           if(!localStorageItem) {
             localStorage.setItem(itemName, JSON.stringify(initialValue) ); 
             parsedTodos = [];
+            setEmpty(true);
           } else {
-            parsedTodos = JSON.parse(localStorageItem)
+            parsedTodos = JSON.parse(localStorageItem);
+            if(parsedTodos && !parsedTodos.length) {
+              setEmpty(true);
+              
+            }
           }
           setItem(parsedTodos);
           setLoading(false)
@@ -43,7 +49,8 @@ function useLocalStorage(itemName, initialValue) {
       item, 
       saveItem,
       loading,
-      error
+      error,
+      empty
     };
 }
 

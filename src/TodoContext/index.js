@@ -7,11 +7,11 @@ const TodoContext = React.createContext();
 
 export default function TodoProvider(props) {
 
-    const { item: todos, saveItem: saveTodos, loading, error } = useLocalStorage('TODOS_V1', []);
+  const { item: todos, saveItem: saveTodos, loading, error, empty } = useLocalStorage('TODOS_V1', []);
   // const [ nombre, saveNombre ] = useLocalStorage('nombre', 'Tavo');
 
   const [ searchValue, setSearchValue ] = React.useState('');
-
+  const [openModal, setOpenModal] = React.useState(false);
   const completedTodos = todos.filter(todo => todo.completed).length;
   const totalTodos = todos.length;
 
@@ -33,6 +33,14 @@ export default function TodoProvider(props) {
     newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
     saveTodos(newTodos);
   }
+  const  addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({
+      completed: false,
+      text: text
+    });
+    saveTodos(newTodos);
+  }
   const  deleteTodos = (text) => {
     console.log('dele', text)
     const todoIndex = todos.findIndex(todo => todo.text == text);
@@ -41,16 +49,6 @@ export default function TodoProvider(props) {
     saveTodos(newTodos);
 
   }
-
-
-  // React.useEffect(() => {
-  //   console.log('use effect');
-  // }, totalTodos)
-
-  // console.log('render luego useEffect');
-
-
-
 
     return (
     <TodoContext.Provider value={{
@@ -63,6 +61,10 @@ export default function TodoProvider(props) {
         searchTodos,
         completeTodos,
         deleteTodos,
+        setOpenModal,
+        openModal,
+        addTodo,
+        empty
     }}>
         {props.children}
     </TodoContext.Provider>
