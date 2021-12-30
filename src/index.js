@@ -16,13 +16,42 @@ import reportWebVitals from './reportWebVitals';
 //   );
 // }
 
+// function App(props) {
+//   return (
+//     <h1>{props.saludo}, {props.nombre}</h1>
+//   );
+// }
+
+
+function withSaludo(WrapperdComponent) {
+  // Tiene que retornar un componente de react
+  return function WrapperdComponentWithSaludo(saludo) {
+    // Saludo puede ser una url y aca hacemos el llamado con axios
+    return  function ComponenteDeVerdad(props) {
+      return (
+        <React.Fragment>
+          <WrapperdComponent {...props} saludo={saludo}/>
+          <p>Estamos acompañando a WrapperdComponent</p>
+        </React.Fragment>
+        )
+    }
+  }
+}
+
+const AppWithSaludo = withSaludo(App)('Hola wenas');
+
+
+
 ReactDOM.render(
   <React.StrictMode>
     {/* <App saludo="Hola tavo"/> */}
     {/* <App>
       Holaaa oli
     </App> */}
-  <App/>
+  <App
+
+  />
+  {/* <AppWithSaludo saludo="hey" nombre="Amor"/> */}
   </React.StrictMode>,
   document.getElementById('root')
 );

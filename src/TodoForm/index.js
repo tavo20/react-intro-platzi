@@ -1,12 +1,11 @@
 import React from 'react'
-import { TodoContext } from '../TodoContext';
 
-export default function TodoForm() {
+export default function TodoForm({ 
+    addTodo,
+    setOpenModal
+}) {
     const [ newTodoValue , setNewTodoValue ] = React.useState('');
-     const {
-        addTodo,
-        setOpenModal
-    } = React.useContext(TodoContext);
+
 
     const onCancel = ( )=> {
         // TODO

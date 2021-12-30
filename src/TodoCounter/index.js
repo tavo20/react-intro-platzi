@@ -1,19 +1,20 @@
 import React from 'react';
 import './TodoCounter.css';
-import { TodoContext } from '../TodoContext';
 
 
-function TodoCounter({ total, completed }) {
+function TodoCounter({ completedTodos, totalTodos, loading }) {
 
-  // const { total, completed } = props;
+
     return (
       <React.Fragment>
-        <TodoContext.Consumer>
-          {({completedTodos, totalTodos}) => (
-            <h2 className="TodoCounter">Has completado {completedTodos} de {totalTodos} TODOs</h2>
-          )}
-        </TodoContext.Consumer>
-         {/* <div></div> */}
+        {/* <TodoContext.Consumer>
+          {({completedTodos, totalTodos}) => ( */}
+            <h2 
+              className={`TodoCounter ${loading && "TodoCounter--loading" }`}>
+                Has completado {completedTodos} de {totalTodos} TODOs
+            </h2>
+          {/* )} */}
+        {/* </TodoContext.Consumer> */}
 
       </React.Fragment>
 
