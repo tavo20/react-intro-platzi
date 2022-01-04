@@ -7,7 +7,8 @@ export default function TodoHeader({ children, loading }) {
             { 
             React.Children
                 .toArray(children)
-                .map(child =>  React.cloneElement(child, { loading }) )  }
+                .map(child =>  React.cloneElement(child, { loading }) )  
+            }
         </header>
     )
 }

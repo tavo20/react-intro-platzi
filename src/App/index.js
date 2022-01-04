@@ -40,7 +40,7 @@ function App() {
                 completedTodos={completedTodos}
                 totalTodos={totalTodos}
                 // loading={loading}
-                ></TodoCounter>
+            ></TodoCounter>
             <TodoSearch
                 searchValue={searchValue}
                 setSearchValue={setSearchValue}
