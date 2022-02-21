@@ -17,20 +17,28 @@ import { ChangeAletStorageListener } from '../ChangeAlert';
 function App() {
 
   const {            
-    error,
-    loading, 
-    searchTodos,
-    completeTodos,
-    deleteTodos,
-    openModal,
-    setOpenModal,
-    empty,
-    completedTodos,
-    totalTodos,
-    searchValue,
-    setSearchValue,
-    addTodo,
+     state,
+     updateState
     } = useTodos();
+
+    const {
+      loading,
+      error,
+      totalTodos,
+      completedTodos,
+      searchValue,
+      searchTodos,
+      openModal,
+    } = state;
+
+    const {
+      setSearchValue,
+      completeTodos,
+      deleteTodos,
+      setOpenModal,
+      addTodo,
+      empty
+    } = updateState;
 
 
   return (
@@ -115,10 +123,8 @@ function App() {
         <CreateTodoButton 
          setOpenModal={setOpenModal}
          />
-
+          {/* TRY HOC */}
          <ChangeAletStorageListener/>
-
-         <p>hola</p>
   </React.Fragment>
 )
   

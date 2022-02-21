@@ -9,7 +9,7 @@ function CreateTodoButton(props) {
   }
     return (
       <button className="CreateTodoButton"
-        onClick={() => onClickButton('h ola mundo12')}
+        onClick={() => onClickButton('hola mundo12')}
       >+</button>
     );
   }

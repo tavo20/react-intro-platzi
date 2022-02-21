@@ -12,7 +12,7 @@ function TodoList(props) {
 
         {(props.totalTodos &&  !props.searchTodos?.length) && props.onEmptySearchResults}
 
-
+        {/* Nos llega como children o render mirar arriba º */}
         {props.searchTodos.map(renderFunct)}
 
         {/* <ul>

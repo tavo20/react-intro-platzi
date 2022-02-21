@@ -7,10 +7,10 @@ const TodoContext = React.createContext();
 function useTodos() {
 
   const { item: todos, saveItem: saveTodos, loading, error, empty } = useLocalStorage('TODOS_V1', []);
-  // const [ nombre, saveNombre ] = useLocalStorage('nombre', 'Tavo');
 
   const [ searchValue, setSearchValue ] = React.useState('');
   const [openModal, setOpenModal] = React.useState(false);
+
   const completedTodos = todos.filter(todo => todo.completed).length;
   const totalTodos = todos.length;
 
@@ -49,23 +49,26 @@ function useTodos() {
 
   }
 
-    return (
-      {
-          loading,
-          error,
-          totalTodos,
-          completedTodos,
-          searchValue,
-          setSearchValue,
-          searchTodos,
-          completeTodos,
-          deleteTodos,
-          setOpenModal,
-          openModal,
-          addTodo,
-          empty
-      }
-    )
+  const state = {
+    loading,
+    error,
+    totalTodos,
+    completedTodos,
+    searchValue,
+    searchTodos,
+    openModal,
+  };
+
+  const updateState = {
+    setSearchValue,
+    completeTodos,
+    deleteTodos,
+    setOpenModal,
+    addTodo,
+    empty
+  };
+
+    return { state, updateState };
 }
 
 export { useTodos }
